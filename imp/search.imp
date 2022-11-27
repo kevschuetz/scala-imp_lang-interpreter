@@ -1,0 +1,23 @@
+{
+  lb := 0;
+  ub := 100;
+  print("Lower bound is ", lb);
+  print("Upper bound is ", ub);
+  found := false;
+  i := 0;
+  while (! found) {
+    i := (i + 1) ;
+    m := ((lb + ub) / 2) ;
+    print("My guess is ", m) ;
+    found := readBool("correct?") ;
+    if (! found) {
+       smaller := readBool("Is it smaller?");
+       if smaller
+         ub := (m - 1);
+       else
+         lb := (m + 1);
+    }
+  }
+  print("Found ", m);
+  print("after attempts ", i);
+}

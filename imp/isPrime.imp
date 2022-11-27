@@ -1,0 +1,13 @@
+{
+  n := readInt("Input number to test for prime: ") ;
+  i := 2 ;
+  isPrime := true ;
+  while ((i <= (n / 2)) && isPrime) {
+     print("i = ", i) ;
+     if ((n % i)  == 0)
+         isPrime := false ;
+     i := (i + 1) ;
+  }
+  if isPrime print("Is prime ", n);
+  else print("Not is prime ", n);
+}
